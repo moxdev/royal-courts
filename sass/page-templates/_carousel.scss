@@ -1,0 +1,95 @@
+#home-carousel {
+  min-height:250px;
+  position:relative;
+
+  img {
+    max-width:none;
+  }
+
+  @include respond-to('575') {
+     min-height: 300px;
+  }
+
+  @include respond-to('950') {
+    // min-height: 400px;
+  }
+
+  @include respond-to('1150') {
+    min-height: 400px;
+  }
+}
+
+ol.carousel-nav {
+  @include reset;
+  list-style:none;
+}
+
+#home-carousel ul, #home-carousel ul li {
+  position:absolute;
+  overflow:hidden;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+}
+
+#home-carousel ul li {
+  opacity:0;
+  transition:opacity 2s ease-in-out;
+  margin:0;
+  position:absolute;
+  overflow:hidden;
+  width:100%;
+  top:0;
+  bottom:0;
+}
+
+#home-carousel ul li.active {
+  opacity:1;
+}
+
+ol.carousel-nav {
+  opacity:0;
+  transition:opacity 2s ease-in-out;
+}
+
+#home-carousel ol {
+  text-align:center;
+  position:absolute;
+  bottom:1em;
+  left:2em;
+  z-index:30;
+}
+
+ol.carousel-nav.active {
+  opacity:1;
+}
+
+ol.carousel-nav li {
+  display:inline-block;
+  margin:0 .25em 0 0;
+}
+
+ol.carousel-nav li:last-of-type {
+  margin:0;
+}
+
+ol.carousel-nav li a {
+  display:block;
+  overflow:hidden;
+  width:25px;
+  height:25px;
+  border-radius: 50%;
+  text-decoration:none;
+  background-color:$color__background-carousel-nav;
+  text-indent:-9999em;
+  transition:background-color 2s;
+}
+
+ol.carousel-nav li.active a {
+  background-color:$color__background-carousel-nav-active;
+}
+
+ol.carousel-nav li.active a:hover {
+  cursor:text;
+}

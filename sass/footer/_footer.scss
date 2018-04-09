@@ -1,0 +1,162 @@
+.site-footer {
+  background-color: $color__background-footer;
+  color: $color__footer;
+  @include padding-left-right;
+  @include section-padding;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-info {
+    text-align: center;
+  }
+
+  .right-column {
+    max-width: 500px;
+    @include margin-auto;
+  }
+
+  .contact-information {
+    padding: 1em 0 2em;
+
+    .company-name {
+      display: block;
+    }
+
+    .email {
+      text-decoration: underline;
+      display: block;
+    }
+  }
+
+  .bill-of-rights {
+    padding: 1em 0;
+  }
+
+  .social {
+    margin: 1em 0;
+  }
+
+  .translate {
+    max-width: 200px;
+    margin: 0 auto 2em auto;
+    background-color: transparent;
+
+    .goog-te-gadget {
+      color: $color__google-translate;
+    }
+    .goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active {
+      color: $color__google-translate;
+    }
+  }
+
+  .property-management-logos {
+    font-size: 12px;
+    margin-bottom: 1em;
+
+    a, span {
+      display: block;
+    }
+
+    .res1-logo {
+      margin-top: .5em;
+    }
+  }
+
+  .footer-disclaimer {
+    padding-bottom: 3em;
+    text-align: center;
+    max-width: 500px;
+    @include margin-auto;
+  }
+
+  .eho {
+    font-size: 9px;
+    line-height: 11px;
+    margin-bottom: 2em;
+    text-align: justify;
+
+    .eho-icons {
+      display: block;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    svg {
+      // width: 40px;
+      // height: 40px;
+    }
+  }
+
+  #mms {
+    font-size: 11px;
+  }
+
+  @include respond-to('1050') {
+
+    .site-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-column {
+      flex: 1;
+      text-align: left;
+      font-size: .8em;
+    }
+
+    .right-column {
+      flex: 3;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 900px;
+      margin:0;
+    }
+
+    .contact-information {
+      padding-top: 0;
+    }
+
+    .social {
+      margin-right: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .translate {
+      align-self: baseline;
+      margin-left:1em;
+      margin-right: 1em;
+    }
+
+    .property-management-logos {
+      margin-left: 1em;
+    }
+
+    .footer-disclaimer {
+      padding-top: 1em;
+      margin:0;
+      text-align: left;
+    }
+
+    .eho {
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+
+
+      .eho-icons {
+        flex: 1 1 10%;
+        // margin-left: auto;
+      }
+
+      .eho-text {
+        flex: 1 1 85%;
+        // max-width: 400px;
+        margin-left: 1em;
+      }
+    }
+  }
+}

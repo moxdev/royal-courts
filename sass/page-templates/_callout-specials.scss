@@ -1,0 +1,47 @@
+.specials-callout {
+  background-color: $color__background-specials-callout;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  color: $color__specials-callout;
+  text-align: center;
+
+  .callout-wrapper {
+    @include container;
+    @include padding-left-right;
+  }
+
+  span {
+    display: block;
+    color: $color__specials-callout;
+  }
+
+  .callout-special {
+    font-size: 1.7em;
+    font-family: $font__bold;
+    @include font-smooth;
+    line-height: 1.2;
+  }
+
+  .callout-details {
+    padding-top: .5em;
+  }
+
+  .callout-disclaimer {
+    font-size: .7em;
+    font-family: $font__light;
+  }
+
+  @include respond-to('750') {
+    .callout-special {
+      font-size: 2em;
+    }
+  }
+
+  @include respond-to('1150') {
+    text-align: left;
+
+    .callout-disclaimer {
+      font-size: .8em;
+    }
+  }
+}

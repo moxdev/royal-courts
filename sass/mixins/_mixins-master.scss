@@ -1,0 +1,153 @@
+@mixin test {
+    border: 1px solid red;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+    font-size: ($sizeValue * 16) * 1px;
+    font-size: $sizeValue * 1rem;
+}
+
+@mixin container {
+    max-width: $width__max-content-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// @mixin xl-container {
+//     max-width: $width_max-content-width-xlg;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// @mixin xxl-container {
+//     max-width: $width_max-content-width-xxlg;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// @mixin xxxl-container {
+//     max-width: $width_max-content-width-xxxlg;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// @mixin xxxxl-container {
+//     max-width: $width_max-content-width-xxxxlg;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// Link Styles
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// Center block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin font-smooth {
+    // text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Clearfix
+@mixin clearfix() {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+// Reset
+@mixin reset() {
+    margin:0;
+    padding:0;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+    clear: both;
+}
+
+// Media queries
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Section padding
+@mixin section-padding {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+// Outside padding
+@mixin padding-left-right() {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+
+    @include respond-to('750') {
+        padding-left: 2.75rem;
+        padding-right: 2.75rem;
+    }
+
+    @media screen and ('1450') {
+        padding-left: 4.75rem;
+        padding-right: 4.75rem;
+    }
+}
+
+// Padding top and Bottom
+@mixin padding-top-bottom() {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+
+    @include respond-to(tablet) {
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
+    }
+}
+
+// Outside margin
+@mixin margin-left-right() {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+
+    @include respond-to(tablet) {
+        margin-left: 2.75rem;
+        margin-right: 2.75rem;
+    }
+}

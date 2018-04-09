@@ -1,0 +1,127 @@
+#masthead {
+  @include padding-left-right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $color__background-masthead;
+  border-bottom: 5px solid $color__border-bottom-masthead;
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-branding {
+    flex: 0 0 50%;
+    a {
+      color: $color__brand-1;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .flex-group {
+    flex: 1 1 50%;
+  }
+
+  #masthead-tel {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: .75em;
+  }
+
+  .download-file-link {
+    margin-right: 10px;
+    display: none;
+    text-decoration: none;
+    color: $color__download-link;
+    font-family: $font__bold;
+    font-size: 1.1em;
+  }
+
+  .icon-download {
+    margin-right: 10px;
+    display: none;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .tel-link {
+    display: none;
+    text-decoration: none;
+    font-family: $font__bold;
+    color: $color__nav-phone;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  .tel {
+    display: none;
+    font-size: 1.1em;
+  }
+
+  #menu-toggle {
+    @include reset;
+    margin-left: auto;
+    background-color: transparent;
+    font-family: $font__regular;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: $color__mobile-toggle-btn;
+  }
+
+  @include respond-to('450') {
+    .flex-wrapper {
+      align-items: flex-end;
+    }
+
+    .site-branding  {
+      flex: 1;
+
+      img {
+        width: 130px;
+      }
+    }
+
+    .flex-group {
+      flex: 2;
+    }
+
+    .tel-link {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @include respond-to('650') {
+    .call {
+      display: none;
+    }
+
+    .tel {
+      display: inline-flex;
+    }
+
+    .site-branding  {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
+  @include respond-to('750') {
+    .icon-download,
+    .download-file-link {
+      display: inline-flex;
+    }
+  }
+}

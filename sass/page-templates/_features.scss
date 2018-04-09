@@ -1,0 +1,57 @@
+.right-sidebar {
+
+  .features {
+
+    h2 {
+      color: $color__h2-features;
+      background-color: $color__h2-background-features;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
+  .features-disclaimer {
+    margin: 1em;
+    font-size: 12px;
+  }
+
+  @include respond-to('750') {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .features {
+      flex: 1 1 50%;
+      padding-right: 1em;
+
+      h2 {
+        text-align: left;
+        padding-left: 1em;
+      }
+
+      ul {
+        padding-left: 2.8em;
+      }
+    }
+
+    .features-disclaimer {
+      flex: 1 1 100%;
+    }
+  }
+
+  @include respond-to('1150') {
+
+    .features {
+      font-size: .9em;
+
+      h2 {
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      .wrapper {
+        padding: 1em 0;
+      }
+    }
+  }
+}

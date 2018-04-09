@@ -1,0 +1,152 @@
+#imagelightbox {
+  position: fixed;
+  z-index: 8000;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.imagelightbox-overlay {
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  z-index:7500;
+  background-color:rgba(255, 255, 255, .95);
+}
+
+button.imagelightbox-arrow {
+  cursor: pointer;
+  width: 3.75em;
+  height: 7.5em;
+  background-color: transparent;
+  vertical-align: middle;
+  // display: none;
+  position: fixed;
+  z-index: 10001;
+  top: 50%;
+  margin-top: -3.75em;
+  border: none;
+  outline: none;
+  color: $color__lightbox-nav-arrows;
+  font-family: $font__main;
+
+  &:hover {
+    color:$color__lightbox-nav-arrows;
+  }
+}
+
+.imagelightbox-arrow:before {
+  width: 0;
+  height: 0;
+  border: 1em solid transparent;
+  content: '';
+  display: inline-block;
+  margin-bottom: -0.125em
+}
+
+.imagelightbox-arrow-left {
+  left: .75rem;
+
+  // @include respond-to(x-small) {
+  //   left: 1.75rem;
+  // }
+}
+
+.imagelightbox-arrow-left:before {
+  border-left: none;
+  border-right-color: $color__lightbox-nav-arrows;
+  margin-left: -0.313em;
+}
+
+.imagelightbox-arrow-right {
+  right: .75rem;
+
+  // @include respond-to(x-small) {
+  //   right: 1.75rem;
+  // }
+}
+
+.imagelightbox-arrow-right:before {
+  border-right: none;
+  border-left-color: $color__lightbox-nav-arrows;
+  margin-right: -0.313em;
+}
+
+.imagelightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  z-index: 8500;
+  color: $color__lightbox-close-btn;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: .5rem;
+  transition: color .125s;
+  min-width: auto;
+  font-family: $font__main;
+
+  &:hover {
+    color:$color__lightbox-close-btn;
+    cursor: pointer;
+  }
+
+  // @include respond-to(small) {
+  //   font-size: 2.5rem;
+  // }
+}
+
+.imagelightbox-caption {
+  font-family: $font__main;
+  font-size: 1.25em;
+  line-height: 1.125;
+  text-align: center;
+  color:$color__text-main;
+  position: fixed;
+  z-index: 9999;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 0.625em;
+}
+
+/* Animation */
+@keyframes loading {
+  to { transform: rotate(360deg); }
+}
+
+/* Loader (*/
+.imagelightbox-loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  z-index: 9999;
+
+  border-top: 6px solid darken($color__brand-1, 20%);
+  border-right: 6px solid darken($color__brand-1, 20%);
+  border-bottom: 6px solid $color__brand-1;
+  border-left: 6px solid $color__brand-1;
+
+  animation: loading 1.2s infinite linear;
+
+}
+
+.imagelightbox-overlay,
+.imagelightbox-close,
+.imagelightbox-caption,
+.imagelightbox-nav,
+.imagelightbox-arrow {
+  animation: fade-in .25s linear;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,80 @@
+.floorplans {
+    text-align: center;
+
+  .floorplan {
+
+    hr {
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      @include reset;
+    }
+
+    span {
+      color: $color__description-title-floorplans;
+      display: block;
+      font-family: $font__medium;
+    }
+
+    .accent-color {
+      color: $color__description-floorplans;
+      display: inline-block;
+    }
+
+    .img-wrapper {
+      margin: 1em 0 2em;
+    }
+  }
+
+  .floor-plan-disclaimer {
+    font-size: 12px;
+    padding-bottom: 3em;
+  }
+
+
+  @include respond-to('750') {
+    .floorplan-inner-wrapper {
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        max-width: 400px;
+      }
+
+      .description,
+      .img-wrapper {
+        flex: 1 1 50%;
+        text-align: left;
+      }
+    }
+  }
+
+  @include respond-to('950') {
+    .floorplan-inner-wrapper {
+
+      img {
+        max-width: 500px;
+      }
+
+      .description {
+        flex: 1 1 40%;
+      }
+
+      .img-wrapper {
+        flex: 1 1 60%;
+      }
+    }
+  }
+
+  @include respond-to('1150') {
+    .floor-plan-disclaimer {
+      font-size: .9em;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+### Specials Callout
+--------------------------------------------------------------*/
+@import "callout-specials";

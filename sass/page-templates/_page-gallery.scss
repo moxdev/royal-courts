@@ -1,0 +1,49 @@
+.gallery {
+  max-width: $width__max-content-width-lg;
+  @include padding-left-right;
+  @include section-padding;
+  margin: 0 auto;
+
+  img {
+    display: block;
+  }
+
+  ul {
+    list-style-type: none;
+    @include reset;
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+
+  @include respond-to('575') {
+    ul {
+      display: flex;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        flex: 0 1 50%;
+        padding: 0 .5em .5em;
+        margin-bottom: .5em;
+      }
+    }
+  }
+
+  @include respond-to('750') {
+    ul {
+      li {
+        flex: 0 1 33%;
+      }
+    }
+  }
+
+  @include respond-to('950') {
+    ul {
+      li {
+        flex: 0 1 25%;
+      }
+    }
+  }
+}

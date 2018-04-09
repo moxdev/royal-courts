@@ -1,0 +1,124 @@
+.page-template-page-contact {
+
+  form {
+    label, input {
+      display: block;
+      width: 100%;
+    }
+
+    label {
+      font-family: $font__bold;
+      margin-bottom: 1em;
+    }
+
+    .submit-button {
+      background-color: $color__background-contact-submit-button;
+      color: $color__contact-submit-button;
+      border-radius: 20px;
+      width: 50%;
+      padding: 10px;
+    }
+
+    .g-recaptcha {
+      padding: 1em 0;
+    }
+
+    .msg-box.error {
+      padding-bottom: 1em;
+
+      span {
+        display: block;
+      }
+
+      strong {
+        color: red;
+      }
+    }
+  }
+
+  aside {
+    @include section-padding;
+    font-family: $font__regular;
+
+    h2 {
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  aside > div {
+    padding-bottom: 1em;
+  }
+
+  #address-phone {
+    span {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  #directions {
+
+    .side-address {
+      display: block;
+    }
+
+    #map-canvas {
+      height: 300px;
+      margin: 1em 0;
+    }
+
+    #response-panel {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .directions-submit-button {
+      color: $color__directions-submit-button;
+      background-color: $color__background-directions-submit-button;
+      width: 50%;
+      text-transform: uppercase;
+      padding: 10px;
+    }
+  }
+
+  @include respond-to('950') {
+    #page {
+
+      .page-flex-wrapper {
+        @include container;
+        display: flex;
+        padding-bottom: 2em;
+      }
+      #primary {
+        flex: 1 1 50%;
+      }
+      #secondary {
+        flex: 1 1 30%;
+      }
+    }
+
+    form {
+      .submit-button {
+        max-width: 30%;
+        font-size: 1em;
+      }
+    }
+
+    #directions {
+      .directions-submit-button {
+        max-width: 40%;
+      }
+
+    }
+  }
+
+
+}

@@ -1,0 +1,13 @@
+/* Small menu. */
+.menu-toggle {
+  display: none;
+}
+
+@include respond-to('950') {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+}

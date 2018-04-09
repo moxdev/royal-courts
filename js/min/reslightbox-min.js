@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery('a[data-imagelightbox="a"]').imageLightbox({activity:!0,animationSpeed:250,arrows:!0,button:!0,caption:!0,overlay:!0})});

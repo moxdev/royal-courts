@@ -1,0 +1,101 @@
+// COMPANY BRAND COLORS
+$color__brand-1 : #0065a4;
+$color__brand-2 : #e58e1a;
+$color__brand-3 : $color__brand-1;
+$color__brand-4 : #111111;
+
+// BACKGROUND COLORS
+$color__background-body     : $color__brand-3;
+$color__background-page     : #fff;
+$color__background-alt-body : #E3E3E3;
+$color__background-screen   : #f1f1f1;
+$color__background-pre      : #eee;
+$color__background-ins      : #fff9c0;
+$color__background-hr       : #ccc;
+
+// TEXT COLORS
+$color__text-main        : #111111;
+$color__text-input       : #666;
+$color__text-input-focus : #111111;
+$color__text-screen      : #21759b;
+$color__text-alt         : #ffffff;
+
+// LINK COLORS
+$color__link         : $color__brand-1;
+$color__link-visited : $color__brand-4;
+$color__link-hover   : $color__brand-2;
+
+// MASTHEAD
+$color__background-masthead    : #ffffff;
+$color__border-bottom-masthead : $color__brand-1;
+
+// MAIN NAV LINKS
+$color__nav-links : #6d6e70;
+$color__nav-background-dropdown: #fff;
+$color__nav-background-dropdown-li: #ccc;
+$color__nav-dropdown-li-a: inherit;
+$color__nav-current-item : $color__brand-1;
+
+// NAV PHONE NUMBER
+$color__nav-phone : $color__brand-1;
+
+// NAV DOWNLOAD LINK
+$color__download-link : $color__brand-1;
+
+// MOBILE TOGGLE BUTTON
+$color__mobile-toggle-btn : #6d6e70;
+
+// BUTTON COLORS
+$color__button-background   : #ccc;
+$color__border-button       : #ccc #ccc #bbb;
+$color__border-button-hover : #ccc #bbb #aaa;
+$color__border-button-focus : #aaa #bbb #bbb;
+
+// FORM COLORS
+$color__border-input : #ccc;
+$color__border-abbr  : #666;
+$color__h2-quick-form: $color__brand-1;
+$color__submit-btn   : $color__brand-2;
+
+// HEADING COLORS
+$color__h1 : $color__brand-1;
+$color__h2 : $color__brand-2;
+
+// CAROUSEL NAV
+$color__background-carousel-nav        : #fff;
+$color__background-carousel-nav-active : $color__brand-2;
+
+// SPECIALS SIDEBAR
+$color__h2-specials: $color__brand-1;
+$color__h3-specials: $color__brand-2;
+$color__p-specials: #6d6e70;
+$color__hr-specials: lighten( $color__p-specials, 30% );
+
+// FEATURES SIDEBAR
+$color__h2-features: #ffffff;
+$color__h2-background-features: $color__brand-2;
+
+// SPECIALS CALLOUT
+$color__background-specials-callout: $color__brand-2;
+$color__specials-callout: #ffffff;
+
+// FLOORPLANS PAGE
+$color__description-title-floorplans: $color__brand-1;
+$color__description-floorplans: $color__brand-4;
+
+// CONTACT PAGE
+$color__background-contact-submit-button: $color__brand-2;
+$color__contact-submit-button: #fff;
+
+$color__background-directions-submit-button: $color__brand-1;
+$color__directions-submit-button: #fff;
+
+// FOOTER
+$color__background-footer: $color__brand-3;
+$color__background-google-translate: $color__brand-4;
+$color__footer: $color__text-alt;
+$color__google-translate: $color__text-alt;
+
+// LIGHTBOX COLORS
+$color__lightbox-nav-arrows: $color__brand-1;
+$color__lightbox-close-btn: $color__brand-1;

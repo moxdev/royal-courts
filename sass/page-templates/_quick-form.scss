@@ -1,0 +1,134 @@
+#left-secondary {
+  .form-quick-contact-wrapper {
+    display: none;
+
+    h2 {
+      color: $color__h2-quick-form;
+      margin-top: 2em;
+      margin-bottom: 0;
+    }
+
+    form {
+
+      .flex > div {
+        margin-bottom: 1em;
+      }
+
+      label,
+      input {
+        width: 100%;
+      }
+
+      label {
+        display: block;
+        color: #53534a;
+      }
+
+      .quick-form-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 280px;
+
+        .form-button {
+          flex: 1 1 20%;
+          @include reset;
+          color: $color__brand-2;
+          text-transform: uppercase;
+          background: transparent;
+          font-family: $font__bold;
+          text-align: left;
+          font-size: 1em;
+          position: relative;
+          padding-top: 10px;
+        }
+
+        .arrow {
+          flex: 1 1 25%;
+          padding-top: 2px;
+
+          svg {
+            width: 27px;
+            height: 27px;
+          }
+        }
+      }
+
+      // .form-button {
+      //   @include reset;
+      //   color: $color__brand-2;
+      //   text-transform: uppercase;
+      //   background: transparent;
+      //   font-family: $font__bold;
+      //   text-align: left;
+      //   font-size: 1em;
+      //   position: relative;
+      //   padding-top: 10px;
+
+      //   // &:after {
+      //   //   content: '';
+      //   //   position: absolute;
+      //   //   top: 4px;
+      //   //   left: 100%;
+      //   //   background-image: url('/wp-content/themes/resone_template/imgs/submit-arrow.svg');
+      //   //   background-repeat: no-repeat;
+      //   //   display: inline-flex;
+      //   //   width: 27px;
+      //   //   height: 27px;
+      //   //   margin-left: 10px;
+      //   // }
+      // }
+
+      .g-recaptcha {
+        padding: 1em 0;
+      }
+
+      .msg-box.error {
+        padding-bottom: 1em;
+
+        span {
+          display: block;
+        }
+
+        strong {
+          color: red;
+        }
+      }
+    }
+
+    @include respond-to('950') {
+      display: block;
+      font-size: .9em;
+
+      h2 {
+        @include reset;
+      }
+    }
+
+    @include respond-to('1150') {
+      form {
+        .quick-form-button-wrapper {
+
+          .form-button {
+            flex: 1 1 30%;
+          }
+        }
+      }
+    }
+
+    @include respond-to('1450') {
+      form {
+        .quick-form-button-wrapper {
+
+          .form-button {
+            flex: 1 1 39%;
+          }
+
+          .arrow {
+            padding-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.main-navigation {
+	display: none;
+
+	ul {
+		@include reset;
+		list-style: none;
+		display: flex;
+
+		li {
+			position: relative;
+			display: flex;
+
+			&:hover ul {
+				display: block;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			padding-left: .3em;
+			color:$color__nav-links;
+
+			@media screen and (min-width: 1010px) {
+				padding-left: .75em;
+			}
+		}
+
+		ul {
+			display: none;
+			box-shadow: none;
+			position: absolute;
+			top: 85%;
+			border-radius: 0 0 2px 2px;
+			z-index: 999999;
+			background-color: $color__nav-background-dropdown;
+			font-size: .9em;
+			padding: 1em 0;
+
+			li {
+
+				&:hover {
+					background-color: $color__nav-background-dropdown-li;
+				}
+			}
+
+			a {
+				padding-top: .25em;
+				padding-bottom: .25em;
+				color: $color__nav-dropdown-li-a;
+			}
+		}
+	}
+
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__nav-current-item;
+	}
+
+	@include respond-to('950') {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	@include respond-to('1150') {
+		ul {
+			a {
+				padding-left: 1em;
+			}
+		}
+	}
+
+	@include respond-to('1450') {
+		ul {
+			a {
+				padding-left: 2em;
+			}
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
