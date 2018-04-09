@@ -7,7 +7,7 @@
 		"uuidString": "35136C51-B0D5-41BC-877A-191EFB7AB074"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26667",
 "files": {
 	"\/404.php": {
 		"cB": 0,
@@ -1708,7 +1708,8 @@
 	"creationDate": 525816026,
 	"displayValue": "Royal Courts",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "brackets_gray"
+	"iconImageName": "brackets_gray",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3511,6 +3512,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

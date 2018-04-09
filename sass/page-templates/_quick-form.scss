@@ -24,60 +24,13 @@
         color: #53534a;
       }
 
-      .quick-form-button-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        max-width: 280px;
-
-        .form-button {
-          flex: 1 1 20%;
-          @include reset;
-          color: $color__brand-2;
-          text-transform: uppercase;
-          background: transparent;
-          font-family: $font__bold;
-          text-align: left;
-          font-size: 1em;
-          position: relative;
-          padding-top: 10px;
-        }
-
-        .arrow {
-          flex: 1 1 25%;
-          padding-top: 2px;
-
-          svg {
-            width: 27px;
-            height: 27px;
-          }
-        }
+      .form-button {
+        background-color: $color__background-contact-submit-button;
+        color: $color__contact-submit-button;
+        border-radius: 20px;
+        width: 75%;
+        padding: 10px;
       }
-
-      // .form-button {
-      //   @include reset;
-      //   color: $color__brand-2;
-      //   text-transform: uppercase;
-      //   background: transparent;
-      //   font-family: $font__bold;
-      //   text-align: left;
-      //   font-size: 1em;
-      //   position: relative;
-      //   padding-top: 10px;
-
-      //   // &:after {
-      //   //   content: '';
-      //   //   position: absolute;
-      //   //   top: 4px;
-      //   //   left: 100%;
-      //   //   background-image: url('/wp-content/themes/resone_template/imgs/submit-arrow.svg');
-      //   //   background-repeat: no-repeat;
-      //   //   display: inline-flex;
-      //   //   width: 27px;
-      //   //   height: 27px;
-      //   //   margin-left: 10px;
-      //   // }
-      // }
 
       .g-recaptcha {
         padding: 1em 0;
@@ -103,30 +56,10 @@
       h2 {
         @include reset;
       }
-    }
 
-    @include respond-to('1150') {
       form {
-        .quick-form-button-wrapper {
-
-          .form-button {
-            flex: 1 1 30%;
-          }
-        }
-      }
-    }
-
-    @include respond-to('1450') {
-      form {
-        .quick-form-button-wrapper {
-
-          .form-button {
-            flex: 1 1 39%;
-          }
-
-          .arrow {
-            padding-top: 3px;
-          }
+        .form-button {
+          font-size: 1em;
         }
       }
     }
